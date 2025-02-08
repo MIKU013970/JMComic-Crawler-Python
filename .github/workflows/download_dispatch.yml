@@ -1,59 +1,59 @@
-name: 下载JM本子 (dispatch)
+姓名:下载JM本子(dispatch)
 
-on:
-  workflow_dispatch:
-    inputs:
-      JM_ALBUM_IDS:
-        type: string
-        description: 本子id（多个id用-隔开，如 '123-456-789'）
-        required: false
+在……之上:
+workflow_dispatch:
+输入:
+JM_ALBUM_IDS:
+类型:线
+描述:本子id(467243)
+必需的:假的
 
-      JM_PHOTO_IDS:
-        type: string
-        description: 章节id（单独下载章节，多个id同上）
-        required: false
+JM_PHOTO_IDS:
+类型:线
+描述:章节id(单独下载章节，多个id同上)
+必需的:假的
 
-      CLIENT_IMPL:
-        type: string
-        description: 客户端类型（client.impl），下载失败时，你可以尝试填入此项重试。'api' 表示移动端，'html' 表示网页端。
-        default: ''
-        required: false
+client_IMPL:
+类型:线
+描述:客户端类型(client.impl)，下载失败时，你可以尝试填入此项重试。'api'表示移动端，'html'表示网页端。
+默认:''
+必需的:假的
 
-      IMAGE_SUFFIX:
-        type: string
-        description: 图片后缀（download.cache.suffix），默认为空，表示不做图片格式转换。可填入例如 'png' 'jpg'
-        default: ''
-        required: false
+image_SUFFIX:
+类型:线
+描述:图片后缀(download.cache.suffix)，默认为空，表示不做图片格式转换。可填入例如'png' 'jpg'
+默认:''
+必需的:假的
 
-      DIR_RULE:
-        type: string
-        description: 下载文件夹规则（dir_rule.rule）。默认使用配置文件的 'Bd_Aauthor_Atitle_Pindex'。
-        default: ''
-        required: false
+Dir_RULE:
+类型:线
+描述:下载文件夹规则(dir_rule.rule)。默认使用配置文件的'Bd_aauthor_aTitle_Pindex'。
+默认:''
+必需的:假的
 
-      ZIP_NAME:
-        type: string
-        default: 本子.tar.gz
-        description: 压缩文件名称
-        required: false
+zip_NAME:
+类型:线
+默认:本子.tar.gz
+描述:压缩文件名称
+必需的:假的
 
-      UPLOAD_NAME:
-        type: string
-        default: Click me to download
-        description: 上传文件名称
-        required: false
+upload_NAME:
+类型:线
+默认:按一下我下载
+描述:上传文件名称
+必需的:假的
 
-#      JM_USERNAME:
-#        type: string
-#        default: ''
-#        description: '禁漫帐号（不建议使用，用户名和密码会泄露在日志中。最好用secrets）'
-#        required: false
+#JM_USERNAME：
+#type:string
+#default："
+#description：'禁漫帐号（不建议使用，用户名和密码会泄露在日志中。最好用机密)'
+#required:false
 #
-#      JM_PASSWORD:
-#        type: string
-#        default: ''
-#        description: '禁漫密码（不建议使用，用户名和密码会泄露在日志中。最好用secrets）'
-#        required: false
+#JM_PASSWORD：
+#type:string
+#default："
+#description：'禁漫密码（不建议使用，用户名和密码会泄露在日志中。最好用机密)'
+#required:false
 
 
 jobs:
